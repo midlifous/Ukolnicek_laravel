@@ -33,6 +33,7 @@ function smazat(cislo){
     tlacitka[i].disabled = true;
   }
   setTimeout(mazani, 5000);
+  
 }
 function mazani(){
   let mazanaVec = document.getElementById("in" + number);

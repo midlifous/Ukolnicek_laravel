@@ -5,6 +5,7 @@
 
 header{
     display: flex;
+   
     justify-content: space-between;
     height: 70px;
     background-color: black;
@@ -58,6 +59,7 @@ nav > a.active{
 
 nav {
     display: grid;
+    
     grid-template-columns: 100px 70px;
     grid-gap: 15px;
     text-align: center;
