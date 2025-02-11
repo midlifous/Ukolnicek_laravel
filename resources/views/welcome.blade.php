@@ -16,8 +16,7 @@
              @else
                  @livewire('navigation-menu')
             @endguest
-               
-            </nav>
+             </nav>
         </header>
     
 
@@ -25,15 +24,17 @@
             
          
         <div id="ukoly">
+        <ul>
         @foreach ($Ukoly as $ukol)
-            <ul><li><p>{{$ukol->nazev}}</p> <form action="{{route('smazUkol',['id' => $ukol->id])}}" method="post">
+            <li><p>{{$ukol->nazev}}</p> <form action="{{route('smazUkol',['id' => $ukol->id])}}" method="post">
                         @csrf
                         <x-button @click="smazat(['id' => $ukol->id])">Smazat úkol</x-button>
                         
                         
-             </form></li></ul>
+             </form></li>
                 
             @endforeach 
+            </ul>
             </div>       
            
         

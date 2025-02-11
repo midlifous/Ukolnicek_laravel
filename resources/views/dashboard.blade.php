@@ -22,22 +22,23 @@
           
         <section id="prvni">
        <form action="{{route('pridatUkol')}}" method="post" enctype="multipart/form-data" >
-        @csrf
-        @if(Session::has("message"))
-        <p>{{ Session::get("message")}}</p>
-    @endif
+    
         <div>
-            <br>
+            
             <x-input name="ukol-name" id="ukol-name" required  placeholder="zadejte úkol"/>
             <x-input-error for="ukol-name" />
-        </div>
-       
-        <div>
+        
             <br>
             <x-button>
                 Pridej Úkol
             </x-button>
         </div>
+        <br>
+
+        @csrf
+        @if(Session::has("message"))
+        <p>{{ Session::get("message")}}</p>
+    @endif
 
        </form>
     </section>

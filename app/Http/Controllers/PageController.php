@@ -39,13 +39,8 @@ class PageController extends Controller
     public function smazaniUkolu(int $id)
     {
         $ukol = Ukoly::find($id);
-        if(null == $ukol){
-            return back()->with("message","Tento úkol neexistuje");
-        }else{
-           
-             $ukol->delete();
-            return back()->with("message","úkol byl smazán");
-        }
+        $ukol->delete();
+            return back();
     }
     
 }
